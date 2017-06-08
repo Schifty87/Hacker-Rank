@@ -28,7 +28,7 @@ public class Solution {
 		for(int i=0; i<H; i++){
 			int x = S.nextInt();
 			int y = S.nextInt();
-			ArrayList<Integer> W = arr.get(x-1);
+			
 			if(x>arr.size()||y>arr.get(x-1).size()){
 				System.out.println("ERROR!");
 			}
