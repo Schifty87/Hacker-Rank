@@ -8,11 +8,28 @@ import java.util.regex.*;
 
 
 class Arithmetic{
-	
+	private String name;
+	Arithmetic(String name){
+		this.name = name;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
 }
 
 class Adder extends Arithmetic{
 	
+	Adder(){
+		super("Arithmetic");
+	}
+	
+	public int add(int x, int y){
+		return x + y;
+	}
+		
 }
 
 
