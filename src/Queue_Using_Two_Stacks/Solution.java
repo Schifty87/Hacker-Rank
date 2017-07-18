@@ -20,42 +20,29 @@ public class Solution {
 			int option = s.nextInt();
 			
 			if(option==1){
-				if(two.isEmpty()){
-					one.push(s.nextInt());
-				}
-				else{
-					//take everything in two and put into one
+				if(!two.isEmpty()){
 					while(!two.isEmpty()){
 						one.push(two.pop());
 					}
-					one.push(s.nextInt());
 				}
+				one.push(s.nextInt());
 			}
 			if(option==2){
-				if(one.isEmpty()){
-					two.pop();
-				}
-				else{
+				if(!one.isEmpty()){
 					while(!one.isEmpty()){
 						two.push(one.pop());
 					}
-					two.pop();
 				}
+				two.pop();
 			}
 			if(option==3){
-				if(one.isEmpty()){
-					System.out.println(two.peek());
-				}
-				else{
+				if(!one.isEmpty()){
 					while(!one.isEmpty()){
 						two.push(one.pop());
 					}
-					System.out.println(two.peek());
 				}
+				System.out.println(two.peek());		
 			}
-		}
-		
-		
-		
+		}		
 	}
 }
